@@ -59,7 +59,7 @@ Créer la classe de test et les méthodes permettant de tester la méthode `find
 
 Tester de façon intégrée un cas nominal de la méthode `embaucheEmploye` de la classe `EmployeService`.
 
-## Tests d'acceptation
+## Tests d'acceptation ------------
 
 - Installer Gauge depuis https://gauge.org/. La méthode d'installation recommandée est via npm. Il faut donc installer NodeJS. D'autres méthodes sont possibles cependant. 
 - Ajouter le chemin de l'exécutable Gauge dans la variable d'environnement PATH. Vous pouvez utiliser la commande `where gauge` dans une invite de commande Windows, ou `which gauge` dans un terminal Linux.
