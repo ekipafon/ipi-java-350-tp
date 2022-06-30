@@ -96,4 +96,20 @@ public class EmployeTest {
         //Then
         Assertions.assertThat(primeObtenue).isEqualTo(prime);
     }
+
+    public void testAugmenterSalaire(String matricule,
+                                     Integer nbAnneesAnciennete,
+                                     Integer performance,
+                                     Double tauxActivite,
+                                     Double pourcentage){
+        //Given
+        Employe employe = new Employe("Doe", "John", matricule,
+                LocalDate.now().minusYears(nbAnneesAnciennete), 2500d, performance, tauxActivite);
+
+        //When
+        Double salaireFinal = employe.augmenterSalaire(pourcentage);
+
+        //Then
+        Assertions.assertThat(employe.getSalaire()).isEqualTo(salaireFinal);
+    }
 }
