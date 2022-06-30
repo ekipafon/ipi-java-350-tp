@@ -1,5 +1,6 @@
 package com.ipiecoles.java.java350.model;
 
+import jdk.vm.ci.meta.Local;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -97,7 +98,7 @@ public class EmployeTest {
         Assertions.assertThat(primeObtenue).isEqualTo(prime);
     }
 
-    public void testAugmenterSalaire(String matricule,
+    public void testAugmenterSalaire (String matricule,
                                      Integer nbAnneesAnciennete,
                                      Integer performance,
                                      Double tauxActivite,
@@ -111,5 +112,23 @@ public class EmployeTest {
 
         //Then
         Assertions.assertThat(employe.getSalaire()).isEqualTo(salaireFinal);
+    }
+
+    public void testGetNbRtt(String matricule,
+                             Integer nbAnneesAnciennete,
+                             Integer performance,
+                             Double tauxActivite,
+                             LocalDate date){
+
+        //Given
+        Employe employe = new Employe("Doe", "John", matricule,
+                LocalDate.now().minusYears(nbAnneesAnciennete), 2500d, performance, tauxActivite);
+
+        //When
+        Integer nbRttFinal = employe.getNbRtt(date);
+
+        //Then
+        Assertions.assertThat(employe.getNbRtt(date)).isEqualTo(nbRttFinal);
+
     }
 }

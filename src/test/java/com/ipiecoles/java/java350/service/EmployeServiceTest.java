@@ -32,4 +32,17 @@ public class EmployeServiceTest {
         Employe employe1 = employeRepository.findByMatricule("M00001");
         Assertions.assertThat(employe1).isNull();
     }
+
+    public void testCalculPerformanceCommercial(String matricule, Long caTraite, Long objectifCa) throws EmployeException {
+        //Given
+
+        //When
+        employeService.calculPerformanceCommercial(matricule, caTraite, objectifCa);
+
+        //Then
+        Employe employe1 = employeRepository.findByPerformance(12);
+
+        Assertions.assertThat(employe1).isNull();
+    }
+
 }
