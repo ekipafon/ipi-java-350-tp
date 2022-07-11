@@ -37,6 +37,6 @@ public class EmployeRepositoryTest {
         String matricule = employeRepository.findLastMatricule();
 
         //Then
-        Assertions.assertThat(matricule).isNull();
+        Assertions.assertThat(matricule).isEqualTo("12345");
     }
 }

@@ -1,6 +1,6 @@
 package com.ipiecoles.java.java350.model;
 
-import jdk.vm.ci.meta.Local;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
